@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aframe-ar@1.8.0/dist/aframe-ar.min.js"></script>
 
-
     <!-- Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -20,17 +19,16 @@
   <body style="margin: 0; overflow: hidden;">
 
     <!-- Botões -->
-   <div style="position: absolute; top: 20px; right: 20px; z-index: 10; display: flex; flex-direction: column; gap: 10px;">
-  <button id="start-button">Start</button>
-  <button id="toggle-view" style="display: none;">Mapa</button>
-  <button id="view-pois" style="display: none;">Ver POIs</button>
-  <button id="center-map" style="display: none;">Centrar</button>
-</div>
+    <div style="position: absolute; top: 20px; right: 20px; z-index: 10; display: flex; flex-direction: column; gap: 10px;">
+      <button id="start-button">Start</button>
+      <button id="toggle-view" style="display: none;">Mapa</button>
+      <button id="view-pois" style="display: none;">Ver POIs</button>
+      <button id="center-map" style="display: none;">Centrar</button>
+    </div>
 
     <!-- Mapa -->
     <div id="map-view" style="display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5;">
       <div id="leaflet-map" style="width: 100%; height: 100%;"></div>
-      
     </div>
 
     <!-- Overlay de debug -->
@@ -42,6 +40,7 @@
       vr-mode-ui="enabled: false"
       renderer="colorManagement: true;"
       arjs="sourceType: webcam; debugUIEnabled: false;"
+      device-orientation-permission-ui="enabled: true"
     >
       <!-- Exemplo de marcador inicial -->
       <a-box position="0 0.5 0" material="color: red;"></a-box>
@@ -59,7 +58,8 @@
 
       <!-- Câmera -->
       <a-camera
-        gps-new-camera
+        gps-camera
+        rotation-reader
         position="0 0 0"
         look-controls="enabled: false"
         wasd-controls-enabled="false"
@@ -67,7 +67,6 @@
         cursor="fuse: false; rayOrigin: mouse;">
       </a-camera>
     </a-scene>
-
 
     <!-- Script principal -->
     <script type="module" src="main.js"></script>
