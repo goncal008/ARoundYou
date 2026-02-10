@@ -1,5 +1,5 @@
-import * as THREE from 'https://cdn.skypack.dev/three';
-import { ARButton } from 'https://threejs.org/examples/jsm/webxr/ARButton.js';
+import * as THREE from 'https://unpkg.com/three@0.158.0/build/three.module.js';
+import { ARButton } from 'https://unpkg.com/three@0.158.0/examples/jsm/webxr/ARButton.js';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera();
