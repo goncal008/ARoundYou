@@ -1,69 +1,17 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Corpo da página */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
 }
 
-/* Botões */
-button {
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  background-color: #007aff;
+header {
+  background: #1e1e2f;
   color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 1rem;
+  text-align: center;
 }
 
-button:hover {
-  background-color: #005ecb;
-}
-
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-/* Painel de botões */
-#start-button,
-#toggle-view,
-#view-pois,
-#center-map {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Mapa */
-#map-view {
-  border: 2px solid #007aff;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-/* Overlay de debug */
-#debug-overlay {
-  font-family: monospace;
-  background: rgba(0, 0, 0, 0.8);
-  color: #00ff88;
-  padding: 12px;
-  font-size: 12px;
-  line-height: 1.4;
-  border-top: 1px solid #00ff88;
-}
-
-/* Etiquetas de POIs no A-Frame */
-a-text {
-  font-family: monospace;
-  font-size: 1.2em;
-  color: white;
-  text-shadow: 1px 1px 2px black;
+#map {
+  height: calc(100vh - 100px);
+  width: 100%;
 }
